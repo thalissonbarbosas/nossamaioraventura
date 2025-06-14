@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa Maior Aventura</title>
+
+  <!-- Importação da fonte Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(239,238,236)
+      font-family: "Helvetica", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      color: #666561;
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+
+    #countdown {
+      font-size: 2.5em;
+      color: #666561;
+    }
+  </style>
+</head>
+<body>
+  <h1><i>THALISSON & TALYTA</i></h1>
+  <h1 id="countdown">Carregando...</h1>
+
+  <script>
+    const weddingDate = new Date("2025-11-29T09:30:00");
+    const countdownEl = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        countdownEl.innerText = "É hoje! 💖";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownEl.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
