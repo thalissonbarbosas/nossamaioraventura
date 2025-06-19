@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,12 +62,29 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Wedding colors
+				'wedding-cream': '#f4f3ef',
+				'wedding-white': '#FFFFFF',
+				'wedding-gray': '#a6a6a6',
+				'dress-black': '#000000',
+				'dress-dark-gray': '#737373',
+				'dress-light-gray': '#b9b9b9',
+				'dress-off-white': '#f5f5f5',
+				'mothers-brown': '#79695d',
+				'mothers-tan': '#ae9c8f',
+				'mothers-beige': '#c9c0ae',
+				'bridesmaids-yellow': '#f1e6b1',
+				'bridesmaids-cream': '#fdfadb'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				'brittany': ['Dancing Script', 'cursive'],
+				'raleway': ['Raleway', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +102,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-in': 'slide-in 0.8s ease-out'
 			}
 		}
 	},
