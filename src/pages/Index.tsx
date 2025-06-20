@@ -6,6 +6,7 @@ import Countdown from '../components/Countdown';
 import Schedule from '../components/Schedule';
 import DressCode from '../components/DressCode';
 import PhotoCarousel from '../components/PhotoCarousel';
+import GuestConfirmation from '../components/GuestConfirmation';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Schedule />
       <DressCode />
       <PhotoCarousel />
+      <GuestConfirmation />
     </div>
   );
 };
