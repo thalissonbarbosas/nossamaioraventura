@@ -1,9 +1,9 @@
 
 const Schedule = () => {
   return (
-    <section className="py-10 px-6">
+    <section className="py-6 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-light text-wedding-gray mb-10 text-center tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-light text-wedding-gray mb-6 text-center tracking-wide">
           Cronograma
         </h2>
         
@@ -66,7 +66,7 @@ const Schedule = () => {
                 
                 {/* Restaurant image */}
                 <div className="max-w-lg h-80 mx-auto mb-4 bg-cover bg-center" 
-                     style={{backgroundImage: "url('/images/recepcao2.png')"}}>
+                     style={{backgroundImage: "url('/images/recepcao.png')"}}>
                 </div>
               </div>
               

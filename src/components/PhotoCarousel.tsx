@@ -4,10 +4,7 @@ const PhotoCarousel = () => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   
   const photos = [
-    'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=800&fit=crop',
-    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=800&fit=crop',
-    'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=800&fit=crop',
-    'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&h=800&fit=crop'
+    '/images/carousel/1.png',
   ];
 
   useEffect(() => {
@@ -31,9 +28,9 @@ const PhotoCarousel = () => {
   };
 
   return (
-    <section className="py-10 px-6">
+    <section className="py-6 px-6">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-light text-wedding-gray mb-8 tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-light text-wedding-gray mb-6 tracking-wide">
           Nossos Momentos
         </h2>
         
@@ -97,7 +94,7 @@ const PhotoCarousel = () => {
           <p className="text-wedding-gray font-light text-lg mb-4">
             Mal podemos esperar para celebrar este momento especial com vocês!
           </p>
-          <p className="font-brittany text-3xl text-wedding-gray">
+          <p className="font-brittany text-3xl text-wedding-gray mt-8">
             Talyta & Thalisson
           </p>
         </div>

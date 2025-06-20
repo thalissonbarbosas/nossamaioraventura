@@ -1,4 +1,3 @@
-
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -14,7 +13,7 @@ const Hero = () => {
           Nossa Maior Aventura
         </h2>
         
-        <h1 className="font-brittany text-6xl md:text-8xl text-dress-dark-gray mb-6 leading-none">
+        <h1 className="font-brittany text-5xl md:text-8xl text-dress-dark-gray mb-6 leading-none">
           Talyta & Thalisson
         </h1>
         

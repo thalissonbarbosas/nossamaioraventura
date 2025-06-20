@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 
 const Countdown = () => {
@@ -34,56 +33,29 @@ const Countdown = () => {
   };
 
   return (
-    <section className="py-16 px-6 bg-wedding-white">
+    <section className="py-8 px-6 bg-wedding-white">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-light text-wedding-gray mb-12 tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-light text-wedding-gray mb-8 tracking-wide">
           Contagem Regressiva
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center animate-fade-in">
-            <div className="bg-wedding-gray text-wedding-white p-4 mb-3">
-              <div className="text-4xl md:text-6xl font-light">
-                {formatNumber(timeLeft.days)}
-              </div>
-            </div>
-            <div className="text-sm md:text-base text-wedding-gray tracking-widest uppercase">
-              Dias
-            </div>
+        <div className="flex items-center justify-center text-wedding-gray animate-fade-in">
+          <div className="text-4xl md:text-8xl font-light font-mono tracking-wider">
+            {formatNumber(timeLeft.days)}
+            <span className="text-wedding-gray/60 mx-2">:</span>
+            {formatNumber(timeLeft.hours)}
+            <span className="text-wedding-gray/60 mx-2">:</span>
+            {formatNumber(timeLeft.minutes)}
+            <span className="text-wedding-gray/60 mx-2">:</span>
+            {formatNumber(timeLeft.seconds)}
           </div>
-          
-          <div className="text-center animate-fade-in">
-            <div className="bg-wedding-gray text-wedding-white p-4 mb-3">
-              <div className="text-4xl md:text-6xl font-light">
-                {formatNumber(timeLeft.hours)}
-              </div>
-            </div>
-            <div className="text-sm md:text-base text-wedding-gray tracking-widest uppercase">
-              Horas
-            </div>
-          </div>
-          
-          <div className="text-center animate-fade-in">
-            <div className="bg-wedding-gray text-wedding-white p-4 mb-3">
-              <div className="text-4xl md:text-6xl font-light">
-                {formatNumber(timeLeft.minutes)}
-              </div>
-            </div>
-            <div className="text-sm md:text-base text-wedding-gray tracking-widest uppercase">
-              Minutos
-            </div>
-          </div>
-          
-          <div className="text-center animate-fade-in">
-            <div className="bg-wedding-gray text-wedding-white p-4 mb-3">
-              <div className="text-4xl md:text-6xl font-light">
-                {formatNumber(timeLeft.seconds)}
-              </div>
-            </div>
-            <div className="text-sm md:text-base text-wedding-gray tracking-widest uppercase">
-              Segundos
-            </div>
-          </div>
+        </div>
+        
+        <div className="flex items-center justify-center mt-4 text-sm md:text-base text-wedding-gray/80 tracking-widest uppercase space-x-6 md:space-x-12">
+          <span>Dias</span>
+          <span>Horas</span>
+          <span>Minutos</span>
+          <span>Segundos</span>
         </div>
       </div>
     </section>

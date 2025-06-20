@@ -6,17 +6,20 @@ const DressCode = () => {
   const bridesmaidsColors = ['bg-bridesmaids-yellow', 'bg-bridesmaids-cream'];
 
   return (
-    <section className="py-16 px-6 bg-wedding-white">
+    <section className="py-10 px-6 bg-wedding-white">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-light text-wedding-gray mb-8 tracking-wide">
-          Dress Code: Passeio Completo
+        <h2 className="text-2xl md:text-3xl font-light text-wedding-gray mb-2 tracking-wide">
+          Dress Code
         </h2>
+        <p className="text-lg md:text-xl font-light text-wedding-gray mb-8 tracking-wide">
+          Passeio Completo
+        </p>
         
         {/* Dress code image and figures side by side */}
-        <div className="flex justify-center items-center mb-12">
+        <div className="flex justify-center items-center mb-6">
           {/* Dress code image */}
           <img 
-            src="/images/dresscode.jpeg" 
+            src="/images/dresscode.png" 
             alt="Dress Code - Passeio Completo" 
             className="max-w-md h-80 object-cover"
           />
