@@ -10,7 +10,7 @@ const Countdown = () => {
   });
 
   useEffect(() => {
-    const weddingDate = new Date('2025-03-15T16:00:00').getTime();
+    const weddingDate = new Date('2025-11-29T09:30:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -29,6 +29,10 @@ const Countdown = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const formatNumber = (num: number) => {
+    return num.toString().padStart(2, '0');
+  };
+
   return (
     <section className="py-16 px-6 bg-wedding-white">
       <div className="max-w-4xl mx-auto text-center">
@@ -36,10 +40,12 @@ const Countdown = () => {
           Contagem Regressiva
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center animate-fade-in">
-            <div className="text-4xl md:text-6xl font-light text-wedding-gray mb-2">
-              {timeLeft.days}
+            <div className="bg-wedding-gray text-wedding-white p-4 mb-3">
+              <div className="text-4xl md:text-6xl font-light">
+                {formatNumber(timeLeft.days)}
+              </div>
             </div>
             <div className="text-sm md:text-base text-wedding-gray tracking-widest uppercase">
               Dias
@@ -47,8 +53,10 @@ const Countdown = () => {
           </div>
           
           <div className="text-center animate-fade-in">
-            <div className="text-4xl md:text-6xl font-light text-wedding-gray mb-2">
-              {timeLeft.hours}
+            <div className="bg-wedding-gray text-wedding-white p-4 mb-3">
+              <div className="text-4xl md:text-6xl font-light">
+                {formatNumber(timeLeft.hours)}
+              </div>
             </div>
             <div className="text-sm md:text-base text-wedding-gray tracking-widest uppercase">
               Horas
@@ -56,8 +64,10 @@ const Countdown = () => {
           </div>
           
           <div className="text-center animate-fade-in">
-            <div className="text-4xl md:text-6xl font-light text-wedding-gray mb-2">
-              {timeLeft.minutes}
+            <div className="bg-wedding-gray text-wedding-white p-4 mb-3">
+              <div className="text-4xl md:text-6xl font-light">
+                {formatNumber(timeLeft.minutes)}
+              </div>
             </div>
             <div className="text-sm md:text-base text-wedding-gray tracking-widest uppercase">
               Minutos
@@ -65,8 +75,10 @@ const Countdown = () => {
           </div>
           
           <div className="text-center animate-fade-in">
-            <div className="text-4xl md:text-6xl font-light text-wedding-gray mb-2">
-              {timeLeft.seconds}
+            <div className="bg-wedding-gray text-wedding-white p-4 mb-3">
+              <div className="text-4xl md:text-6xl font-light">
+                {formatNumber(timeLeft.seconds)}
+              </div>
             </div>
             <div className="text-sm md:text-base text-wedding-gray tracking-widest uppercase">
               Segundos
