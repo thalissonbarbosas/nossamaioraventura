@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -53,7 +52,7 @@ const GuestConfirmation = () => {
   };
 
   return (
-    <section className="py-16 px-6 bg-wedding-white">
+    <section className="py-10 px-6 mt-2 bg-wedding-white">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-light text-wedding-gray mb-8 tracking-wide">
           Confirme Sua Presença
@@ -70,7 +69,7 @@ const GuestConfirmation = () => {
               placeholder="Seu nome completo"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="text-center text-lg py-6 border-2 border-wedding-gray/20 focus:border-wedding-gray/40"
+              className="text-center text-lg py-6 border-2 border-wedding-gray/30 focus:border-wedding-gray bg-wedding-white text-wedding-gray placeholder:text-wedding-gray/60 focus-visible:ring-0 focus-visible:ring-offset-0"
               disabled={isSubmitting}
             />
           </div>
@@ -79,18 +78,17 @@ const GuestConfirmation = () => {
             <Button
               onClick={() => handleSubmit(true)}
               disabled={isSubmitting}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg font-medium rounded-md transition-colors"
+              className="bg-wedding-gray hover:bg-dress-dark-gray text-wedding-white px-8 py-6 text-lg font-light tracking-wide transition-colors"
             >
-              ✓ Confirmo
+              ✓ Confirmo Presença
             </Button>
             
             <Button
               onClick={() => handleSubmit(false)}
               disabled={isSubmitting}
-              variant="outline"
-              className="border-2 border-red-500 text-red-600 hover:bg-red-50 px-8 py-6 text-lg font-medium rounded-md transition-colors"
+              className="bg-wedding-gray/20 hover:bg-wedding-gray/30 text-wedding-gray px-8 py-6 text-lg font-light tracking-wide transition-colors"
             >
-              ✗ Não Confirmo
+              ✗ Não Poderei Ir
             </Button>
           </div>
         </div>
