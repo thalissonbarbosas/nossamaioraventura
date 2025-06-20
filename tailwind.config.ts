@@ -83,7 +83,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'brittany': ['Dancing Script', 'cursive'],
+				'brittany': ['Brittany Signature', 'Great Vibes', 'Allura', 'Dancing Script', 'cursive'],
 				'raleway': ['Raleway', 'sans-serif']
 			},
 			keyframes: {
